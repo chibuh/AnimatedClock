@@ -1,0 +1,144 @@
+body{
+    background-image: url(https://media.comicbook.com/2020/03/captain-america-rob-liefeld-1212562.jpeg?auto=webp&width=454&height=610&crop=454:610,smart);
+    background-repeat: no-repeat;
+    margin-top: 284.5px;
+    margin-left: 22px;
+}
+
+/* Clock Design */
+
+.clock {
+    width: 323px;
+    height: 323px;
+    position: relative;
+}
+
+.red1 { 
+    position: relative;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(50% at 50% 50%);
+    background-image: linear-gradient(rgba(235,126,118,255),rgba(185,44,65,255),rgba(91,38,56,255), rgba(109,42,57,255),rgba(185,44,65,255),rgba(241,141,91,255),rgba(238,86,88,255), rgba(109,42,57,255),rgba(185,44,65,255));
+}
+.white {
+    width: 100%;
+    height: 100%;
+    clip-path: circle(40% at 50% 50%);
+    background-image: linear-gradient(#e5e5e5,rgba(227,230,232,255),rgba(158,144,164,255),rgba(101,82,107,255),rgba(158,144,164,255),rgba(227,230,232,255),#e5e5e5);
+}
+.red2 {
+    width: 100%;
+    height: 100%;
+    clip-path: circle(30% at 50% 50%);
+    background-image: linear-gradient(rgba(235,126,118,255),rgba(235,126,118,255),rgba(185,44,65,255),rgba(91,38,56,255), rgba(109,42,57,255),rgba(185,44,65,255),rgba(241,141,91,255),rgba(238,86,88,255), rgba(109,42,57,255),rgba(185,44,65,255));
+}
+.blue {
+    width: 100%;
+    height: 100%;
+    clip-path: circle(20% at 50% 50%);
+    background-image: linear-gradient(#0846a8,#0846a8,rgba(202,219,229,255),rgba(75,104,168,255),rgba(60,98,159,255),rgba(47,35,43,255),rgba(75,104,168,255),rgba(202,219,229,255),#0846a8);
+}
+.star {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#e5e5e5,#e5e5e5,#e5e5e5,rgba(227,230,232,255),rgba(158,144,164,255),rgba(101,82,107,255),rgba(158,144,164,255),rgba(227,230,232,255),#e5e5e5,#e5e5e5);
+    clip-path: polygon(50% 30%, 56% 43%, 69% 44%, 59% 53%, 62% 66%, 50% 59%, 38% 66%, 41% 53%, 31% 44%, 44% 43%);
+}
+
+/* Numbers */
+
+.clock .n {
+    position: absolute;
+    top: 22.5%;
+    left: 22.5%;
+    width: 55%;
+    height: 55%;
+    text-align: center;
+    --rotation: 0;
+    transform: rotate(var(--rotation));
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+.clock .n1 { --rotation: 30deg; }
+.clock .n2 { --rotation: 60deg; }
+.clock .n3 { --rotation: 90deg; }
+.clock .n4 { --rotation: 120deg; }
+.clock .n5 { --rotation: 150deg; }
+.clock .n6 { --rotation: 180deg; }
+.clock .n7 { --rotation: 210deg; }
+.clock .n8 { --rotation: 240deg; }
+.clock .n9 { --rotation: 270deg; }
+.clock .n10 { --rotation: 300deg; }
+.clock .n11 { --rotation: 330deg; }
+
+
+.clock .npi {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    --rotation: 0;
+    transform: rotate(var(--rotation));
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+.clock .n1pi { --rotation: 30deg; }
+.clock .n2pi { --rotation: 60deg; }
+.clock .n3pi { --rotation: 90deg; }
+.clock .n4pi { --rotation: 120deg; }
+.clock .n5pi { --rotation: 150deg; }
+.clock .n6pi { --rotation: 180deg; }
+.clock .n7pi { --rotation: 210deg; }
+.clock .n8pi { --rotation: 240deg; }
+.clock .n9pi { --rotation: 270deg; }
+.clock .n10pi { --rotation: 300deg; }
+.clock .n11pi { --rotation: 330deg; }
+
+/* Clock Hand */
+
+.hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.hand.second {
+    z-index: 10;
+    width: 3px;
+    height: 45%;
+    background-color: black;
+    clip-path: polygon(35% 0%,65% 0%,65% 100%, 35% 100%);
+}
+  
+ .hand.minute {
+    z-index: 9;
+    width: 15px;
+    height: 45%;
+    background-color: black;
+    clip-path: polygon(50% 1%, 34% 27%, 46% 70%, 15% 70%, 15% 76%, 46% 76%, 47% 100%, 54% 100%, 54% 76%, 85% 76%, 85% 70%, 54% 70%, 66% 27%);
+}
+  
+.hand.hour {
+    z-index: 8;
+    width: 15px;
+    height: 45%;
+    background-color: black;
+    clip-path: polygon(50% 50%, 82% 57%, 56% 100%, 44% 100%, 18% 57%);
+}
+
+/* Centre */
+.circle{
+    position: absolute;
+    bottom: 50%;
+    top: 154px;
+    left: 155px;
+    z-index: 20;
+    font-size: 10px;
+}
